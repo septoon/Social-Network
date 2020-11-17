@@ -1,0 +1,46 @@
+.content {
+    grid-area: content;
+}
+
+.item {
+    color: rgb(163, 133, 133);
+    display: grid;
+    grid-template-areas: 
+    "avatar name"
+    "avatar content"
+    "avatar likes";
+    grid-template-rows: 3fr 3fr 1fr;
+    grid-template-columns: 1fr 11fr;
+}
+
+.avatar {
+    /* border: 1px dashed gray; */
+    padding-right: 10px;
+    grid-area: avatar;
+    display: grid;
+    justify-content: flex-end;
+}
+
+.avatar img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.name {
+    /* border: 1px dashed gray; */
+    grid-area: name;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    /* border: 1px dashed gray; */
+    grid-area: content;
+}
+
+.likes {
+    /* border: 1px dashed gray; */
+    grid-area: likes;
+}
+
+

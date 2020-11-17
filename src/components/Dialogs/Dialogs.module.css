@@ -1,0 +1,33 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 50px;
+}
+
+.dialogs_item {
+    border-right: 2px solid gray;
+}
+
+.dialogs_item .active {
+    font-weight: bold;
+}
+
+.dialog {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    height: 40px;
+}
+
+.dialog:hover {
+    cursor: pointer;
+    background-color:  #e7ebf3;
+}
+
+.messages {
+    padding: 10px;
+}
+
+.message {
+
+}

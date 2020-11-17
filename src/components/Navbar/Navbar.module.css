@@ -1,0 +1,27 @@
+.nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color:  #e7ebf3;
+}
+
+.item a {
+    color: #4267B2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.item a.active {
+    font-weight: bold;
+}

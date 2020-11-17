@@ -1,0 +1,8 @@
+.content {
+    grid-area: content;
+    border: 1px solid blue;
+}
+
+.postsBlock {
+    padding: 10px;
+}
