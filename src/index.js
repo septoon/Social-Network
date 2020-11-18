@@ -7,9 +7,11 @@ import state from './redux/state'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={state.profilePage.postsData} dialogsPage={state.dialogsPage} />
+
+    {/* <App posts={state.profilePage.postsData} dialogsPage={state.dialogsPage} /> */}
     {/* <App posts={state.profilePage.postsData} dialogs={state.dialogsData} messages={state.messagesData} /> */}
-    {/* <App state={state} /> */}
+    
+    <App state={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );
