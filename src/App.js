@@ -12,7 +12,6 @@ import Friends from './components/Friends/Friends';
 
 
 const App = props => {
-  console.log(props.state.navbarPage)
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
@@ -23,7 +22,7 @@ const App = props => {
           {/* <Route path='/dialogs' render={ () => <Dialogs dialogs={props.dialogsPage.dialogsData} messages={props.dialogsPage.messagesData}/> } />
           <Route path='/profile' render={ () => <Profile posts={props.posts}/> } /> */}
 
-          <Route path='/dialogs' render={ () => <Dialogs dialogsPage={props.state.dialogsPage} /> } />
+          <Route path='/dialogs' render={ () => <Dialogs dialogsPage={props.state.dialogsPage} addMessage={props.addMessage} /> } />
           <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage} addPost={props.addPost}/> } />
           <Route path='/news' render={ () => <News /> } />
           <Route path='/music' render={ () => <Music /> } />

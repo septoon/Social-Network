@@ -3,7 +3,6 @@ import classes from './MyPosts.module.css'
 import Post from './Post/Post';
 
 const MyPosts = props => {
-    console.log(props.posts)
     let postsElements = props.posts
     .map(arg => <Post message={arg.post} likes={arg.likesCount} name={arg.name} />)
 
@@ -11,6 +10,7 @@ const MyPosts = props => {
     let addPost = () => {
         let text = newPostElement.current.value
         props.addPost(text)
+        newPostElement.current.value = ''
     }
 
     return (
@@ -18,7 +18,7 @@ const MyPosts = props => {
             New post
             <div className={classes.posts}>
                 <textarea ref={newPostElement}></textarea>
-                <button onClick={addPost}>Add post</button>
+                <button onClick={ addPost } >Add post</button>
             </div>
             {postsElements}
         </div>

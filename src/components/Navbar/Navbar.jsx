@@ -4,7 +4,6 @@ import FriendsNav from './FriendsNav/FriendsNav'
 import classes from'./Navbar.module.css'
 
 const Navbar = props => {
-  console.log(props)
     return(
         <nav className={classes.nav}>
           <div className={classes.item}>
