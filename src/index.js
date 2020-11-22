@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './redux/state'
+import {addPost} from './redux/state'
+
+// addPost('samurai')
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +14,7 @@ ReactDOM.render(
     {/* <App posts={state.profilePage.postsData} dialogsPage={state.dialogsPage} /> */}
     {/* <App posts={state.profilePage.postsData} dialogs={state.dialogsData} messages={state.messagesData} /> */}
     
-    <App state={state} />
+    <App state={state} addPost={addPost}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
