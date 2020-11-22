@@ -3,6 +3,7 @@ import classes from './MyPosts.module.css'
 import Post from './Post/Post';
 
 const MyPosts = props => {
+    console.log(props.posts)
     let postsElements = props.posts
     .map(arg => <Post message={arg.post} likes={arg.likesCount} name={arg.name} />)
 

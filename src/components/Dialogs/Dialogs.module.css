@@ -26,8 +26,44 @@
 
 .messages {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .message {
+    display: grid;
+    grid-template-columns: 0.5fr 11.5fr;
+    grid-template-rows: 2fr 10fr;
+    grid-template-areas:
+    "avatar name"
+    "avatar text";
+}
 
+.avatar {
+    padding-top: 5px;
+    grid-area: avatar;
+    /* border: 1px dashed gray; */
+    padding-right: 10px;
+    grid-area: avatar;
+    /* display: grid;
+    align-items: center; */
+    justify-self: start;
+}
+
+.avatar img {
+    width: 20px;
+    border-radius: 50%;
+}
+
+.name {
+    padding-top: 5px;
+    grid-area: name;
+    color: #4267B2;
+    font-weight: bold
+    ;
+}
+
+.text {
+    grid-area: text;
+    padding-top: 10px;
 }

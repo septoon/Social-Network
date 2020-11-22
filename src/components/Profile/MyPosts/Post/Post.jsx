@@ -5,7 +5,7 @@ const Post = (props) => {
     return (
         <div className={classes.item}>
             <div className={classes.avatar}>
-            <img src='https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg' />
+            <img src='https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg' alt='avatar' />
             </div>
             <div className={classes.name}>
                 <strong>{props.name}</strong>
