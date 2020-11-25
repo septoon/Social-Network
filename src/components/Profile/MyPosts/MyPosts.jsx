@@ -7,6 +7,7 @@ const MyPosts = props => {
     .map(arg => <Post message={arg.post} likes={arg.likesCount} name={arg.name} />)
 
     let newPostElement = React.createRef()
+
     let addPost = () => {
         props.addPost()
     }
