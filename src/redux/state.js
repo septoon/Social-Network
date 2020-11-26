@@ -34,13 +34,16 @@ let store = {
             ]
         }
     },
-    getState() {
-        return this._state
-    },
     _callSubscriber() {
         console.log('state changed')
     },
-    addPost() {
+    getState() {
+        return this._state
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer // observer - pattern
+    },
+    _addPost() {
         let newPost = {
             id: 5,
             post: this._state.profilePage.newPostText,
@@ -52,7 +55,11 @@ let store = {
         this._state.profilePage.newPostText = ''
         this._callSubscriber(this._state)
     },
-    addMessage(postMessage) {
+    _updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText
+        this._callSubscriber(this._state)
+    },
+    _addMessage(postMessage) {
         let newMessage = {
             id: 4,
             message: postMessage
@@ -61,12 +68,14 @@ let store = {
         this._state.dialogsPage.messagesData.push(newMessage)
         this._callSubscriber(this._state)
     },
-    updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText
-        this._callSubscriber(this._state)
-    },
-    subscribe(observer) {
-        this._callSubscriber = observer // observer - pattern
+    dispatch(action) {
+        if (action.type === 'ADD-POST'){
+            this._addPost()
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._updateNewPostText(action.newText)
+        } else if (action.type === 'ADD-MESSAGE'){
+            this._addMessage(action.postMessage)
+        }
     }
 }
 

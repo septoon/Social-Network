@@ -13,7 +13,7 @@ const Dialogs = props => {
     let newMessageElement = React.createRef()
     let newMessage = () => {
         let text = newMessageElement.current.value
-        props.addMessage(text)
+        props.dispatch({type: 'ADD-MESSAGE', postMessage: text})
         newMessageElement.current.value = ''
     }
 
