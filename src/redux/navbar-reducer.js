@@ -1,3 +1,5 @@
+const ADD_FRIENDS = 'ADD-FRIENDS'
+
 let initialState = {    
     friendsData: [
         {avatar: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg', name: 'Dima'},
@@ -11,8 +13,19 @@ let initialState = {
 }
 
 const navbarReducer = (state = initialState, action) => {
-
-    return state
+    switch(action.type) {
+        case ADD_FRIENDS:
+            let newFriend = {
+                avatar: '',
+                name: ''
+            }    
+            state.friendsData.push(newFriend)
+            return state
+        default:
+            return state
+    }
 }
+
+export const addFriendActionCreator = () => ({ type: ADD_FRIENDS })
 
 export default navbarReducer

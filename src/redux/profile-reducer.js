@@ -7,7 +7,7 @@ let initialState = {
         {id: 2, post: "It's my first post", likesCount: 15, name: 'Tigran Darchinyan'},
         {id: 3, post: 'It is vary cool', likesCount: 26, name: 'Tigran Darchinyan'}
     ],
-    newPostText: 'Новый пост'
+    newPostText: ''
 
 }
 
