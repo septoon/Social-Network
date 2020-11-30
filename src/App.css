@@ -4,6 +4,7 @@
 }
 
 .app-wrapper {
+  background-color:#EDEEF0;
   display: grid;
   margin: 0 auto;
   width: 1200px;
