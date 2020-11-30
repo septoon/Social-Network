@@ -19,10 +19,7 @@ const navbarReducer = (state = initialState, action) => {
                 avatar: '',
                 name: ''
             }
-            let stateCopy = {...state}
-            stateCopy.friendsData = [...state.friendsData] 
-            stateCopy.friendsData.push(newFriend)
-            return stateCopy
+            return {...state, friendsData: [...state.friendsData, newFriend] }
         default:
             return state
     }
