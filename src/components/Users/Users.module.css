@@ -16,6 +16,10 @@
     grid-template-columns: 2fr 10fr;
 }
 
+.selectedPage {
+    font-weight: bold;
+}
+
 .left {
     grid-area: 'left';
     display: flex;
