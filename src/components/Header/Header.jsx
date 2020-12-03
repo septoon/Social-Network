@@ -1,10 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import classes from './Header.module.css'
 
 const Header = () => {
     return (
         <header className={classes.header}>
-            <h1>Social Network</h1>
+            <NavLink to='/profile' >
+                <h1>SocialNetwork</h1>
+            </NavLink>
         </header>
     )
 }
