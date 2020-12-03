@@ -3,9 +3,15 @@
     background-color: #4267B2;
     display: flex;
     align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 50px;
 }
 
 .header h1 {
     margin-left: 10%;
     color: #fff;
+    margin-left: 400px;
 }
