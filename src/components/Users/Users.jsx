@@ -11,7 +11,7 @@ const Users = (props) => {
     }
     return(
         <div className={classes.users_wrapper} >
-            <div>
+            <div className={classes.pageNumbers} >
                 {pages.map((p) => {
                     if(pages.length > 30) pages.length = 30
                     return <span onClick={(e) => {props.onPageChanged(p)}} className={props.currentPage === p && classes.selectedPage} >{p}</span>

@@ -48,3 +48,14 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
+.pageNumbers {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+}
+
+.pageNumbers span {
+    color: #4267B2;
+    cursor: pointer;
+}
