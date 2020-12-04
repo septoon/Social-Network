@@ -8,6 +8,10 @@ const ProfileInfo = props => {
             <Preloader />
         )
     }
+    // ARTHUR
+    // const {profile = {}} = props;
+    // const {fullName = "Tigran Darchinyan", aboutMe = "", photos = {small: ""}} = profile || {};
+
     return(
         <div>
             <div>
@@ -15,11 +19,14 @@ const ProfileInfo = props => {
             </div>
             <div className={classes.descriptionBlock}>
                 <div>
-                <img className={classes.avatar} src={props.profile.photos.small} />
+                    <img className={classes.avatar} src={props.profile.photos.small} />
+                {/* <img className={classes.avatar} src={photos.small} /> */}
                 </div>
                 <div>
                     <h1>{props.profile.fullName}</h1>
                     <p>{props.profile.aboutMe}</p>
+                    {/* <h1>{fullName}</h1>
+                    <p>{aboutMe}</p> */}
                 </div>
             </div>
         </div>

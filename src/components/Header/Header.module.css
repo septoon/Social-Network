@@ -2,6 +2,7 @@
     grid-area: header;
     background-color: #4267B2;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     left: 0;
@@ -11,7 +12,14 @@
 }
 
 .header h1 {
-    margin-left: 10%;
     color: #fff;
-    margin-left: 400px;
+    /* margin-left: 400px; */
+}
+
+.loginBlock {
+    /* float: right; */
+}
+
+.loginBlock a {
+    color: #fff;
 }

@@ -1,4 +1,3 @@
-import { act } from "react-dom/cjs/react-dom-test-utils.production.min"
 
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
