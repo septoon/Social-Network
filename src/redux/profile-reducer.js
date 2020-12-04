@@ -3,13 +3,11 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
 
 let initialState = {            
+    profile: null,
     postsData: [
-        {id: 1, post: 'Hi, how are you?', likesCount: 12, name: 'Tigran Darchinyan'},
-        {id: 2, post: "It's my first post", likesCount: 15, name: 'Tigran Darchinyan'},
-        {id: 3, post: 'It is vary cool', likesCount: 26, name: 'Tigran Darchinyan'}
+        {id: 1, post: 'Hi, how are you?', likesCount: 12, name: 'Tigran Darchinyan'}
     ],
-    newPostText: '',
-    profile: null
+    newPostText: ''
 
 }
 
