@@ -6,17 +6,16 @@ import Users from './Users'
 import Preloader from '../common/Preloader/Preloader'
 import classes from './Users.module.css'
 import { getUsers } from '../../api/api'
-import * as axios from 'axios'
 
 
 class UsersClassContainer extends React.Component {
 
     componentDidMount() {
         this.props.toggleIsFetching(true)
-        getUsers(this.props.currentPage, this.props.pageSize).then(response => {
+        getUsers(this.props.currentPage, this.props.pageSize).then(data => {
             this.props.toggleIsFetching(false)
-            this.props.setUsers(response.data.items)
-            this.props.setTotalUsersCount(response.data.totalCount)
+            this.props.setUsers(data.items)
+            this.props.setTotalUsersCount(data.totalCount)
         })
         
     }
@@ -24,9 +23,9 @@ class UsersClassContainer extends React.Component {
     onPageChanged = (pageNumber) => {
         this.props.toggleIsFetching(true)
         this.props.setCurrentPage(pageNumber)
-        getUsers(pageNumber, this.props.pageSize).then(response => {
+        getUsers(pageNumber, this.props.pageSize).then(data => {
             this.props.toggleIsFetching(false)
-            this.props.setUsers(response.data.items)
+            this.props.setUsers(data.items)
         })
     }
     
