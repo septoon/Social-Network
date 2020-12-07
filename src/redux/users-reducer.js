@@ -13,7 +13,7 @@ let initialState = {
         // {id: 3, avatar: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg', followed: true, fullName: 'Dmitry', status: 'I am here', location: {city: 'Dnepr', country: 'Ukraine'}},
         // {id: 4, avatar: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg', followed: true, fullName: 'Max', status: 'I am here', location: {city: 'Minsk', country: 'Belarus'}}
     ],
-    pageSize: 99,
+    pageSize: 9,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: false
