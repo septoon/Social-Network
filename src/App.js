@@ -10,6 +10,7 @@ import Music from './components/Music/Music';
 import UsersContainer from './components/Users/UsersContainer';
 import Settings from './components/Settings/Settings';
 import Friends from './components/Friends/Friends';
+import Login from './components/Login/Login';
 
 
 const App = props => {
@@ -26,6 +27,7 @@ const App = props => {
           <Route path='/users' render={ () => <UsersContainer /> } />
           <Route path='/settings' render={ () => <Settings /> } />
           <Route path='/friends' render={ () => <Friends /> } />
+          <Route path='/login' render={ () => <Login /> } />
         </div>
       </div>
     </BrowserRouter>

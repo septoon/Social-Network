@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import Preloader from '../../common/Preloader/Preloader';
 import classes from './ProfileInfo.module.css'
 
@@ -7,10 +8,7 @@ const ProfileInfo = props => {
         return (
             <Preloader />
         )
-    }
-    // ARTHUR
-    // const {profile = {}} = props;
-    // const {fullName = "Tigran Darchinyan", aboutMe = "", photos = {small: ""}} = profile || {};
+    } else if (!props.isAuth) return <Redirect to={'/login'} />
 
     return(
         <div>
