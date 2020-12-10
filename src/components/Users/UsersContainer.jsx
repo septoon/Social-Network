@@ -5,9 +5,7 @@ import Users from './Users'
 import Preloader from '../common/Preloader/Preloader'
 import classes from './Users.module.css'
 
-
 class UsersClassContainer extends React.Component {
-
     componentDidMount() {
         this.props.getUsers(this.props.currentPage, this.props.pageSize)
         
@@ -18,7 +16,6 @@ class UsersClassContainer extends React.Component {
     }
     
     render() {
-
        return (
            <div className={classes.users_wrapper} >
                 {this.props.isFetching ? <Preloader /> : 
