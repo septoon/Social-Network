@@ -4,11 +4,11 @@ import {connect} from 'react-redux'
 import Users from './Users'
 import Preloader from '../common/Preloader/Preloader'
 import classes from './Users.module.css'
+import { compose } from 'redux'
 
 class UsersClassContainer extends React.Component {
     componentDidMount() {
         this.props.getUsers(this.props.currentPage, this.props.pageSize)
-        
     }
     
     onPageChanged = (pageNumber) => {
@@ -44,6 +44,6 @@ let mapStateToProps = state => {
     }
 }
 
-const UsersContainer = connect(mapStateToProps, { follow, unfollow, getUsers}) (UsersClassContainer)
+const UsersContainer = compose(connect(mapStateToProps, { follow, unfollow, getUsers})) (UsersClassContainer)
 
 export default UsersContainer
