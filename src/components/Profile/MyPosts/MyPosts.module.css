@@ -6,3 +6,7 @@
 .postsBlock {
     padding: 10px;
 }
+
+.posts textarea {
+    background: #FFFFFD;
+}

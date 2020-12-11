@@ -3,11 +3,14 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: #EDEEF0;
+}
+
 .app-wrapper {
-  background-color:#EDEEF0;
   display: grid;
   margin: 0 auto;
-  width: 1200px;
+  width: 80%;
   grid-template-areas: 
   "header header"
   "nav content";

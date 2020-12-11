@@ -7,25 +7,25 @@ const Navbar = props => {
     return(
         <nav className={classes.nav}>
           <div className={classes.item}>
-            <NavLink to='/profile' activeClassName={classes.active}>My Profile</NavLink>
-          </div>
-          <div className={classes.item}>
-            <NavLink to='/dialogs' activeClassName={classes.active}>My Messages</NavLink>
+            <NavLink to='/profile' activeClassName={classes.active}>Моя страница</NavLink>
           </div>
           <div className={`${classes.item} ${classes.active}`}>
-            <NavLink to='/news' activeClassName={classes.active}>My News</NavLink>
+            <NavLink to='/news' activeClassName={classes.active}>Новости</NavLink>
           </div>
           <div className={classes.item}>
-            <NavLink to='/music' activeClassName={classes.active}>My Music</NavLink>
+            <NavLink to='/dialogs' activeClassName={classes.active}>Сообщения</NavLink>
           </div>
           <div className={classes.item}>
-            <NavLink to='/users' activeClassName={classes.active}>My Users</NavLink>
+            <NavLink to='/friends' activeClassName={classes.active}>Друзья</NavLink>
           </div>
           <div className={classes.item}>
-            <NavLink to='/settings' activeClassName={classes.active}>My Settings</NavLink>
+            <NavLink to='/music' activeClassName={classes.active}>Аудиозаписи</NavLink>
           </div>
           <div className={classes.item}>
-            <NavLink to='/friends' activeClassName={classes.active}>My Friends</NavLink>
+            <NavLink to='/users' activeClassName={classes.active}>Пользователи</NavLink>
+          </div>
+          <div className={classes.item}>
+            <NavLink to='/settings' activeClassName={classes.active}>Настройки</NavLink>
           </div>
           <FriendsNavContainer />
       </nav>
