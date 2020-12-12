@@ -8,7 +8,7 @@
     height: 150px;
     border-radius: 50%;
     border: 10px solid #e7ebf3;
-    transform: translateY(-50%);
+    transform: translateY(0%);
 }
 
 .descriptionBlock {

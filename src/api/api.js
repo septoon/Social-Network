@@ -28,11 +28,20 @@ export const usersAPI = {
     },
     getProfile: (userId) => {
         return instance.get(`profile/${userId}`)
+    },
+    status: () => {
+        return instance.put(`profile/status`)
     }
 }
 
 export const authAPI = {
     me: () => {
+        return instance.get(`auth/me`)
+    }
+}
+
+export const statusAPI = {
+    status: () => {
         return instance.get(`auth/me`)
     }
 }
