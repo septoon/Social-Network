@@ -10,10 +10,10 @@ const ProfileInfo = props => {
         )
     }
     return(
-        <div>
+        <div className={classes.wrapper} >
             <div className={classes.descriptionBlock}>
                 <div>
-                    <img className={classes.avatar} src={props.profile.photos.small} />
+                    
                 </div>
                 <div>
                     <h1>{props.profile.fullName}</h1>

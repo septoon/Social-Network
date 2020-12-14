@@ -1,0 +1,11 @@
+.profile_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2.5fr 10fr;
+}
+
+.profile_wrapper:first-child {
+    height: 300px;
+    margin: 2%;
+    background: #FFFFFD;
+}
