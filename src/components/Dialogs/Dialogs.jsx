@@ -2,35 +2,41 @@ import React from 'react';
 import classes from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
+import { Field, reduxForm } from 'redux-form';
+import Input from '../common/FormsControls/FormControls';
+import { required, maxLengthCreator } from '../common/Validator/Validator';
+
+const maxLength50 = maxLengthCreator(50)
+
+const DialogsForm = props => {
+    return(
+        <form onSubmit={props.handleSubmit} >
+ 
+            <Field autoFocus placeholder='New message...' validate={[required, maxLength50]} name='newMessageBody' component={Input} />
+
+            <button>New Message</button>
+        </form>
+    )
+}
+
+const DialogsFormRedux = reduxForm({ form: 'dialogs' }) (DialogsForm)
 
 const Dialogs = props => {
-    let state = props.dialogsPage
+    let messagesElements = props.dialogsPage.messagesData.map(arg => <Message key={arg.id} message={arg.message} />)
+    let dialogsElements = props.dialogsPage.dialogsData.map(dialog => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} /> )
 
-    let dialogsElements = state.dialogsData.map(dialog => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} /> )
-    let messagesElements = state.messagesData.map(arg => <Message key={arg.id} message={arg.message} />)
-    let newMessageBody = state.newMessageBody
-
-    let onSendMessageClick = () => {
-        props.sendMessage()
+    let addMessage = (value) => {
+        props.sendMessage(value.newMessageBody)
     }
 
-    let onNewMessageChange = (event) => {
-        let body = event.target.value
-        props.updateNewMessageBody(body)
-    }
-
-    return(
+    return (
         <div className={classes.dialogs}>
             <div className={classes.dialogs_item}>
                 {dialogsElements}
             </div>
-            <div className={classes.messages}>
+            <div className={classes.messages} >
                 {messagesElements}
-                <textarea value={newMessageBody}
-                onChange={onNewMessageChange}
-                placeholder='New message...' />
-
-                <button onClick={onSendMessageClick}>New Message</button>
+                <DialogsFormRedux onSubmit={addMessage} />
             </div>
         </div>
     )

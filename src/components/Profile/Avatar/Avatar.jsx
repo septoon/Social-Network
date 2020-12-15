@@ -5,7 +5,7 @@ const Avatar = (props) => {
     // let avatar = props.profile.photos.small
     return(
         <div className={classes.avatarBlock}>
-            <img className={classes.avatar} src='' alt='avatar' />
+            <img className={classes.avatar} src='{avatar}' alt='avatar' />
             <button>Написать сообщение</button>
         </div>
     )
