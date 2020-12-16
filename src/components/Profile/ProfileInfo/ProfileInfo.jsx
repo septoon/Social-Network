@@ -12,9 +12,10 @@ const ProfileInfo = props => {
     return(
         <div className={classes.wrapper} >
             <div className={classes.descriptionBlock}>
-                <div>
-                    
-                </div>
+            {/* <div className={classes.avatarBlock}>
+                <img className={classes.avatar} src={props.profile.photos.small} alt='avatar' />
+                <button>Написать сообщение</button>
+            </div> */}
                 <div>
                     <h1>{props.profile.fullName}</h1>
                     <ProfileStatus updateStatusProfile={props.updateStatusProfile} status={props.status}/>
