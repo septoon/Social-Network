@@ -1,10 +1,11 @@
 import React from 'react';
-import classes from './Friends.module.css'
+import FriendsNavContainer from '../Navbar/FriendsNav/FriendsNavContainer'
 
 const Friends = (props) => {
     return(
         <div>
-            Friends
+            <h2>Friends</h2>
+            <FriendsNavContainer />
         </div>
     )
 }

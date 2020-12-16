@@ -9,9 +9,12 @@ const maxLength15 = maxLengthCreator(15)
 
 const PostForm = props => {
     return (
-        <form onSubmit={props.handleSubmit} >
+        <form onSubmit={props.handleSubmit} > 
             <div className={classes.posts}>
-                <Field autoFocus placeholder={'New post...'} validate={[required, maxLength15]} name={'newPostText'} component={Input} />
+                <Field autoFocus placeholder={'New post...'}
+                        validate={[required, maxLength15]}
+                        name={'newPostText'}
+                        component={Input} />
                 <button>Add post</button>
             </div>
         </form>
