@@ -1,10 +1,12 @@
 .content {
     grid-area: content;
-    border: 1px solid blue;
 }
 
 .postsBlock {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);    
+    background: #FFFFFD;
     padding: 10px;
+    margin-left: 10px;
 }
 
 .posts textarea {

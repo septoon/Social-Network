@@ -10,7 +10,7 @@ body {
 .app-wrapper {
   display: grid;
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
   grid-template-areas: 
   "header header"
   "nav content";

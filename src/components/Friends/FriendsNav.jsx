@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from'../Navbar.module.css'
+import classes from'./Friends.module.css'
 import FriendsItem from './FriendsItem/FriendsItem'
 
 const FriendsNav = props => {

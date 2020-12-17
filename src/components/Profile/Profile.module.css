@@ -1,11 +1,14 @@
 .profile_wrapper {
     width: 100%;
+}
+
+.top,
+.bottom {
     display: grid;
     grid-template-columns: 2.5fr 10fr;
 }
 
-.profile_wrapper:first-child {
-    height: 300px;
-    margin: 2%;
-    background: #FFFFFD;
+.bottom {
+    margin-top: 10px;
 }
+
