@@ -24,7 +24,9 @@ const PostForm = props => {
 const PostReduxForm = reduxForm({ form: 'post' }) (PostForm)
 
 const MyPosts = React.memo(props => {
-    let postsElements = props.postsData
+    let postsElements = 
+    [...props.postsData] // делаем копию массива постов, чтобы перевернуть
+    .reverse()
     .map(arg => <Post key={arg.id} message={arg.post} likes={arg.likesCount} name={arg.name} />)
 
     const onAddPost = value => props.addPost(value.newPostText)
