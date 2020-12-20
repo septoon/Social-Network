@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import Profile from './Profile';
 import {getUserProfile, getStatusProfile, updateStatusProfile} from '../../redux/profile-reducer'
 import {connect} from 'react-redux'
@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 import { compose } from 'redux';
 
-class ProfileContainer extends React.Component {
+class ProfileContainer extends PureComponent {
     componentDidMount() {
         let userId = this.props.match.params.userId || this.props.authorizedUserId
         // if (!userId) this.props.history.push('/login')
