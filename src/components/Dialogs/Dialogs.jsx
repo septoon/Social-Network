@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
-import { Field, reduxForm } from 'redux-form';
+import { reset, Field, reduxForm } from 'redux-form';
 import Input from '../common/FormsControls/FormControls';
 import { required, maxLengthCreator } from '../common/Validator/Validator';
 
@@ -11,7 +11,6 @@ const maxLength50 = maxLengthCreator(50)
 const DialogsForm = props => {
     return(
         <form onSubmit={props.handleSubmit} >
- 
             <Field autoFocus placeholder='New message...' validate={[required, maxLength50]} name='newMessageBody' component={Input} />
 
             <button>New Message</button>
@@ -26,7 +25,7 @@ const Dialogs = props => {
     let dialogsElements = props.dialogsPage.dialogsData.map(dialog => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} /> )
 
     let addMessage = (value) => {
-        props.sendMessage(value.newMessageBody)
+        props.sendMessage(reset(value.newMessageBody))
     }
 
     return (

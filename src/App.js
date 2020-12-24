@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Navbar from './components/Navbar/Navbar';
 import ProfileContainer from './components/Profile/ProfileContainer';
@@ -13,7 +13,6 @@ import Friends from './components/Friends/Friends';
 import Login from './components/Login/Login';
 import { connect } from 'react-redux';
 import { initializeApp } from './redux/app-reducer'
-// import { compose } from 'redux';
 import Preloader from './components/common/Preloader/Preloader';
 
 
@@ -25,22 +24,20 @@ class App extends React.Component {
     if(this.props.initialized === false) <Preloader /> 
 
     return (
-      <BrowserRouter>
-        <div className='app-wrapper'>
-          <HeaderContainer />
-          <Navbar />
-          <div className='app-wrapper-content'>
-            <Route path='/dialogs' render={ () => <DialogsContainer /> } />
-            <Route path='/profile/:userId?' render={ () => <ProfileContainer /> } />
-            <Route path='/news' render={ () => <News /> } />
-            <Route path='/music' render={ () => <Music /> } />
-            <Route path='/users' render={ () => <UsersContainer /> } />
-            <Route path='/settings' render={ () => <Settings /> } />
-            <Route path='/friends' render={ () => <Friends /> } />
-            <Route path='/login' render={ () => <Login /> } />
-          </div>
+      <div className='app-wrapper'>
+        <HeaderContainer />
+        <Navbar />
+        <div className='app-wrapper-content'>
+          <Route path='/dialogs' render={ () => <DialogsContainer /> } />
+          <Route path='/profile/:userId?' render={ () => <ProfileContainer /> } />
+          <Route path='/news' render={ () => <News /> } />
+          <Route path='/music' render={ () => <Music /> } />
+          <Route path='/users' render={ () => <UsersContainer /> } />
+          <Route path='/settings' render={ () => <Settings /> } />
+          <Route path='/friends' render={ () => <Friends /> } />
+          <Route path='/login' render={ () => <Login /> } />
         </div>
-      </BrowserRouter>
+      </div>
     )
   }
 }

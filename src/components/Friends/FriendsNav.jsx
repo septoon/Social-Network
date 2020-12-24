@@ -6,7 +6,7 @@ const FriendsNav = props => {
   let friendsElements = props.navbarPage.friendsData.map(arr => <FriendsItem key={arr.id} avatar={arr.avatar} name={arr.name} />)
 
     return(
-          <div className={classes.friendsWindow}>
+          <div className={classes.wrapper}>
             {friendsElements}
           </div>
     )

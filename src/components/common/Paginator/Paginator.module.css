@@ -1,0 +1,10 @@
+.pageNumbers {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    cursor: pointer;
+}
+
+.selectedPage {
+    font-weight: bold;
+}
