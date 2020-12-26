@@ -14,7 +14,6 @@
 }
 
 .avatar {
-    /* border: 1px dashed gray; */
     padding-right: 10px;
     grid-area: avatar;
     display: grid;
@@ -27,19 +26,16 @@
 }
 
 .name {
-    /* border: 1px dashed gray; */
     grid-area: name;
     display: flex;
     align-items: center;
 }
 
 .content {
-    /* border: 1px dashed gray; */
     grid-area: content;
 }
 
 .likes {
-    /* border: 1px dashed gray; */
     grid-area: likes;
 }
 
