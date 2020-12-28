@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;
     width: 600px;
-    cursor: pointer;
 }
 
 .pageNumber {
@@ -13,4 +12,9 @@
 .pageNumber.selectedPage {
     font-weight: bold;
     border-color: black;
+    cursor: pointer;
+}
+
+.pageNumbers button {
+    cursor: pointer;
 }
