@@ -9,13 +9,10 @@ const ProfileInfo = props => {
             <Preloader />
         )
     }
+
     return(
         <div className={classes.wrapper} >
             <div className={classes.descriptionBlock}>
-            {/* <div className={classes.avatarBlock}>
-                <img className={classes.avatar} src={props.profile.photos.small} alt='avatar' />
-                <button>Написать сообщение</button>
-            </div> */}
                 <div>
                     <h1>{props.profile.fullName}</h1>
                     <ProfileStatusWH updateStatusProfile={props.updateStatusProfile} status={props.status}/>

@@ -11,7 +11,7 @@ const Paginator = (props) => {
     let [portionNumber, setPortionNumber] = useState(1)
     let leftPortionPageNumber = (portionNumber - 1) * portionSize + 1
     let rightPortionPageNumber = portionNumber * portionSize
- debugger
+
     return(
         <div className={classes.pageNumbers} >
             { portionNumber > 1 ? <button onClick={ () => {setPortionNumber(portionNumber - 1)} } >Prev</button> : <button disabled >Prev</button> }

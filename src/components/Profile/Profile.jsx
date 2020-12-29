@@ -9,8 +9,9 @@ const Profile = props => {
     return (
         <div className={classes.profile_wrapper}>
             <div className={classes.top} >
-                <Avatar profile={props.profile} />
-                <ProfileInfo profile={props.profile} status={props.status} updateStatusProfile={props.updateStatusProfile} />
+                <Avatar profile={props.profile} savePhoto={props.savePhoto} isOwner={props.isOwner} />
+                <ProfileInfo profile={props.profile}
+                status={props.status} updateStatusProfile={props.updateStatusProfile} />
             </div>
             <div className={classes.bottom} >
                 <Friends />

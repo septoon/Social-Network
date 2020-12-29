@@ -34,7 +34,14 @@ export const usersAPI = {
 export const profileAPI = {
     getProfile: (userId) => instance.get(`profile/${userId}`),
     getStatus: (userId) => instance.get(`profile/status/${userId}`),
-    updateStatus: (status) => instance.put(`profile/status`, {status: status})
+    updateStatus: (status) => instance.put(`profile/status`, {status: status}),
+    savePhoto: (photo) => {
+        const formData = new FormData()
+        formData.append('image', photo)
+        return instance.put(`profile/photo`, formData, {
+            headers: { 'Content-Type': 'multipart/form-data' } // не обязательный аргумент
+        })
+    }
 }
 
 export const authAPI = {
