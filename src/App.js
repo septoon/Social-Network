@@ -3,7 +3,7 @@ import './App.css'
 import { Route } from 'react-router-dom'
 import HeaderContainer from './components/Header/HeaderContainer'
 import Navbar from './components/Navbar/Navbar'
-import News from './components/News/News'
+import NewsContainer from './components/News/NewsContainer'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 import Friends from './components/Friends/Friends'
@@ -34,7 +34,7 @@ class App extends React.Component {
         <div className='app-wrapper-content'>
           <Route path='/dialogs' render={ withSuspense(DialogsContainer) } />
           <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) } />
-          <Route path='/news' render={ () => <News /> } />
+          <Route path='/news' render={ () => <NewsContainer /> } />
           <Route path='/music' render={ () => <Music /> } />
           <Route path='/users' render={ withSuspense(UsersContainer) } />
           <Route path='/settings' render={ () => <Settings /> } />

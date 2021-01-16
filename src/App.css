@@ -20,9 +20,20 @@ body {
 }
 
 .app-wrapper-content {
+  width: 80%;
   grid-area: content;
 }
 
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 1366px) {
+  .app-wrapper {
+    width: 80%;
+  }
+
+  .app-wrapper-content {
+    width: 100%;
+  }
 }

@@ -1,11 +1,12 @@
 .frItem {
-    width: 80px;
+    width: 33%;
     height: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .frItem img {

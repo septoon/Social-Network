@@ -7,7 +7,7 @@ const FriendsNav = props => {
 
     return(
           <div className={classes.wrapper}>
-            {friendsElements}
+              {friendsElements}
           </div>
     )
 }

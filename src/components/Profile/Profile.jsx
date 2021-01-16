@@ -11,11 +11,14 @@ const Profile = props => {
             <div className={classes.top} >
                 <Avatar profile={props.profile} savePhoto={props.savePhoto} isOwner={props.isOwner} />
                 <ProfileInfo profile={props.profile}
-                status={props.status} updateStatusProfile={props.updateStatusProfile} />
+                status={props.status} updateStatusProfile={props.updateStatusProfile}
+                isOwner={props.isOwner}  />
             </div>
             <div className={classes.bottom} >
-                <Friends />
-                <MyPostsContainer profile={props.profile} />            
+                <div className={classes.friends_wrapper} >
+                    <Friends />
+                </div>
+                <MyPostsContainer profile={props.profile} isOwner={props.isOwner} />            
             </div>
         </div>
     )

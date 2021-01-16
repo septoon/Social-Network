@@ -14,3 +14,15 @@
     width: 100px;
     height: 100px;
 }
+
+.status {
+    display: flex;
+}
+
+.status b {
+    margin-right: 5px;
+}
+
+.contacts {
+    padding-left: 10px;
+}

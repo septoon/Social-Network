@@ -1,12 +1,10 @@
-.friends_wrapper {
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    background: #FFFFFD;
-    padding: 10px;
-    height: 206px;
-}
-
 .wrapper {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 300px;
+}
+
+.fe_wrap {
+    width: 33%;
 }

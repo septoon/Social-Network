@@ -8,6 +8,23 @@ const instance = axios.create({
     }
 })
 
+const newsInstance = axios.create({
+    withCredentials: true,
+    baseUrl: `http://newsapi.org/`,
+    headers: {
+        'API-KEY': 'b910539e60434e3b80d6c9c10816d372'
+    }
+})
+
+export const newsAPI = {
+    getNews: () => {
+        return newsInstance.get(`v2/everything?q=bitcoin&apiKey=b910539e60434e3b80d6c9c10816d372`)
+        .then(response => {
+            return response.data
+        })
+    }
+}
+
 export const usersAPI = {
     getUsers: (currentPage = 1, pageSize = 10) => {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`, { withCredentials: true })
