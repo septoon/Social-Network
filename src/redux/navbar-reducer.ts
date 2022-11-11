@@ -1,5 +1,10 @@
 const ADD_FRIENDS = 'ADD-FRIENDS'
 
+type FriendsType = {
+    avatar: string
+    name: string
+}
+
 let initialState = {    
     friendsData: [
         {avatar: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg', name: 'Dima'},
@@ -8,11 +13,12 @@ let initialState = {
         {avatar: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg', name: 'Sasha'},
         {avatar: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg', name: 'Den'},
         {avatar: 'https://cdn.jpegmini.com/user/images/slider_puffin_before_mobile.jpg', name: 'Max'}
-    ]
-
+    ] as Array<FriendsType>
 }
 
-const navbarReducer = (state = initialState, action) => {
+export type InitialStateType = typeof initialState
+
+const navbarReducer = (state = initialState, action: any): InitialStateType => {
     switch(action.type) {
         case ADD_FRIENDS:
             let newFriend = {
@@ -25,6 +31,9 @@ const navbarReducer = (state = initialState, action) => {
     }
 }
 
-export const addFriendActionCreator = () => ({ type: ADD_FRIENDS })
+type AddFriendActionCreatorType = {
+    type: typeof ADD_FRIENDS
+}
+export const addFriendActionCreator = (): AddFriendActionCreatorType => ({ type: ADD_FRIENDS })
 
 export default navbarReducer
